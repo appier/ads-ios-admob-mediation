@@ -289,9 +289,10 @@ PLATFORMS
   universal-darwin-21
 
 DEPENDENCIES
-  cocoapods
-  fastlane
-  slather
+  cocoapods (~> 1.11.3)
+  fastlane (~> 2.205.1)
+  nokogiri (>= 1.13.4)
+  slather (~> 2.7.2)
 
 BUNDLED WITH
    2.3.11
