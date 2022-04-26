@@ -61,7 +61,7 @@ platform :ios do
       server_url: "https://api.github.com",
       api_token: ENV["GITHUB_TOKEN"],
       http_method: "POST",
-      path: "/repos/appier/ads-ios-sdk/pulls",
+      path: "/repos/appier/ads-ios-admob-mediation/pulls",
       body: {
         "head": branch_name,
         "base": "main",
@@ -88,9 +88,9 @@ platform :ios do
     end
 
     github_release = set_github_release(
-      repository_name: "appier/ads-ios-sdk",
+      repository_name: "appier/ads-ios-admob-mediation",
       api_token: ENV["GITHUB_TOKEN"],
-      name: "Appier Ads iOS SDK #{framework_version}",
+      name: "Appier Admod Mediation iOS SDK #{framework_version}",
       tag_name: tag,
       description: "",
       commitish: "main",
