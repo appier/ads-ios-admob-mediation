@@ -1,0 +1,4 @@
+framework module AppierAdMobMediation {
+  header "AppierAdMobMediation-Swift.h"
+  requires objc
+}
