@@ -73,7 +73,7 @@ platform :ios do
   desc "Deploy Podspecs to CocoaPods Trunk"
   lane :pods do
     Dir.chdir("..") do
-      sh "pod trunk push AppierAds.podspec --allow-warnings"
+      sh "pod trunk push AppierAdmobMediation.podspec --allow-warnings"
     end
   end
 
@@ -81,10 +81,10 @@ platform :ios do
   lane :release do
     framework_version = get_framework_version
     tag = "v#{framework_version}"
-    archive_name = "AppierAdsFramework.zip"
+    archive_name = "AppierAdmobMediationFramework.zip"
 
     Dir.chdir("..") do
-      sh "zip -r #{archive_name} AppierAds.xcframework"
+      sh "zip -r #{archive_name} AppierAdmobMediation.xcframework"
     end
 
     github_release = set_github_release(
@@ -101,7 +101,7 @@ platform :ios do
   end
 
   private_lane :get_framework_version do
-    plist_file = "../AppierAds.xcframework/ios-arm64/AppierAds.framework/Info.plist"
+    plist_file = "../AppierAdmobMediation.xcframework/ios-arm64/AppierAdmobMediation.framework/Info.plist"
     sh("/usr/libexec/PlistBuddy #{plist_file} -c 'Print :CFBundleShortVersionString'").strip
   end
 

@@ -11,10 +11,10 @@ module Fastlane
         output_directory = params[:output_directory]
 
         build_xcframework(
-          scheme: "AppierAds",
+          scheme: "AppierAdmobMediation",
           configuration: params[:configuration],
           output_directory: output_directory,
-          output_name: "AppierAds.xcframework"
+          output_name: "AppierAdmobMediation.xcframework"
         )
 
         output_absolute_path = File.expand_path(output_directory)
@@ -30,7 +30,7 @@ module Fastlane
       #####################################################
 
       def self.description
-        "Build AppierAds.xcframework binary frameworks."
+        "Build AppierAdmobMediation.xcframework binary frameworks."
       end
 
       def self.available_options
@@ -72,27 +72,27 @@ module Fastlane
 
       def self.build_xcframework(scheme:, configuration:, output_directory:, output_name:)
         other_action.build_app(
-          workspace: "AppierAdsWorkspace.xcworkspace",
+          workspace: "AppierAdmobMediationWorkspace.xcworkspace",
           scheme: scheme,
           configuration: configuration,
-          archive_path: "#{output_directory}/xcarchive/AppierAdsWorkspace-iphoneos.xcarchive",
+          archive_path: "#{output_directory}/xcarchive/AppierAdmobMediationWorkspace-iphoneos.xcarchive",
           destination: "generic/platform=iOS",
           skip_package_ipa: true
         )
 
         other_action.build_app(
-          workspace: "AppierAdsWorkspace.xcworkspace",
+          workspace: "AppierAdmobMediationWorkspace.xcworkspace",
           scheme: scheme,
           configuration: configuration,
-          archive_path: "#{output_directory}/xcarchive/AppierAdsWorkspace-iphonesimulator.xcarchive",
+          archive_path: "#{output_directory}/xcarchive/AppierAdmobMediationWorkspace-iphonesimulator.xcarchive",
           destination: "generic/platform=iOS Simulator",
           skip_package_ipa: true
         )
 
         other_action.create_xcframework(
           frameworks: [
-            "#{output_directory}/xcarchive/AppierAdsWorkspace-iphoneos.xcarchive/Products/Library/Frameworks/#{scheme}.framework",
-            "#{output_directory}/xcarchive/AppierAdsWorkspace-iphonesimulator.xcarchive/Products/Library/Frameworks/#{scheme}.framework"
+            "#{output_directory}/xcarchive/AppierAdmobMediationWorkspace-iphoneos.xcarchive/Products/Library/Frameworks/#{scheme}.framework",
+            "#{output_directory}/xcarchive/AppierAdmobMediationWorkspace-iphonesimulator.xcarchive/Products/Library/Frameworks/#{scheme}.framework"
           ],
           output: "#{output_directory}/#{output_name}"
         )
