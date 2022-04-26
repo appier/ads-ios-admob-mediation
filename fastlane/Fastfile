@@ -1,0 +1,108 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  before_all do
+    setup_circle_ci
+  end
+
+  desc "Open GitHub pull request"
+  lane :pr do |options|
+    branch_name = options.fetch(:branch_name, "release")
+    framework_version = get_framework_version
+
+    # Set Podspec version
+    version_file = {
+      "version" => "v#{framework_version}"
+    }
+
+    File.write("../version.json", version_file.to_json)
+
+    # Commit and push changes
+    sh "git checkout -b #{branch_name}"
+
+    path = [
+      "./*.xcframework/*",
+      "./version.json"
+    ]
+
+    git_add(
+      path: path
+    )
+
+    git_commit(
+      path: path,
+      message: "Release #{framework_version}"
+    )
+
+    push_to_git_remote(
+      force: true,
+      local_branch: branch_name,
+      remote_branch: branch_name
+    )
+
+    # Open pull request
+    github_api(
+      server_url: "https://api.github.com",
+      api_token: ENV["GITHUB_TOKEN"],
+      http_method: "POST",
+      path: "/repos/appier/ads-ios-sdk/pulls",
+      body: {
+        "head": branch_name,
+        "base": "main",
+        "title": "Release v#{framework_version}"
+      }
+    )
+  end
+
+  desc "Deploy Podspecs to CocoaPods Trunk"
+  lane :pods do
+    Dir.chdir("..") do
+      sh "pod trunk push AppierAds.podspec --allow-warnings"
+    end
+  end
+
+  desc "Create release on GitHub"
+  lane :release do
+    framework_version = get_framework_version
+    tag = "v#{framework_version}"
+    archive_name = "AppierAdsFramework.zip"
+
+    Dir.chdir("..") do
+      sh "zip -r #{archive_name} AppierAds.xcframework"
+    end
+
+    github_release = set_github_release(
+      repository_name: "appier/ads-ios-sdk",
+      api_token: ENV["GITHUB_TOKEN"],
+      name: "Appier Ads iOS SDK #{framework_version}",
+      tag_name: tag,
+      description: "",
+      commitish: "main",
+      upload_assets: [
+        archive_name
+      ]
+    )
+  end
+
+  private_lane :get_framework_version do
+    plist_file = "../AppierAds.xcframework/ios-arm64/AppierAds.framework/Info.plist"
+    sh("/usr/libexec/PlistBuddy #{plist_file} -c 'Print :CFBundleShortVersionString'").strip
+  end
+
+end
