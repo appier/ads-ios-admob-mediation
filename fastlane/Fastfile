@@ -90,7 +90,7 @@ platform :ios do
     github_release = set_github_release(
       repository_name: "appier/ads-ios-admob-mediation",
       api_token: ENV["GITHUB_TOKEN"],
-      name: "Appier Admod Mediation iOS SDK #{framework_version}",
+      name: "Appier Admob Mediation iOS SDK #{framework_version}",
       tag_name: tag,
       description: "",
       commitish: "main",

@@ -29,7 +29,7 @@ Generate Xcode workspace
 [bundle exec] fastlane ios build
 ```
 
-Build Appier Admod Mediation framework
+Build Appier Admob Mediation framework
 
 ----
 
