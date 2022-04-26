@@ -1,0 +1,73 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name AppierAdMobMediation
+import AppierAds
+import Foundation
+import GoogleMobileAds
+import Swift
+import _Concurrency
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class APRAdMobMediation : ObjectiveC.NSObject {
+  @objc public static var shared: AppierAdMobMediation.APRAdMobMediation
+  @objc final public let advertiserIcon: Swift.String
+  @objc final public let advertiserName: Swift.String
+  @objc final public let version: Swift.String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class APRAdAdapter : ObjectiveC.NSObject, GoogleMobileAds.GADMediationAdapter {
+  @objc public static func adapterVersion() -> GoogleMobileAds.GADVersionNumber
+  @objc public static func adSDKVersion() -> GoogleMobileAds.GADVersionNumber
+  @objc public static func networkExtrasClass() -> GoogleMobileAds.GADAdNetworkExtras.Type?
+  @objc override required dynamic public init()
+  @objc public func loadNativeAd(for adConfiguration: GoogleMobileAds.GADMediationNativeAdConfiguration, completionHandler: @escaping GoogleMobileAds.GADMediationNativeLoadCompletionHandler)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class APRAdMobNativeAd : ObjectiveC.NSObject {
+  @objc deinit
+}
+extension AppierAdMobMediation.APRAdMobNativeAd : GoogleMobileAds.GADMediationNativeAd {
+  @objc dynamic public var headline: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var images: [GoogleMobileAds.GADNativeAdImage]? {
+    @objc get
+  }
+  @objc dynamic public var body: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var icon: GoogleMobileAds.GADNativeAdImage? {
+    @objc get
+  }
+  @objc dynamic public var callToAction: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var starRating: Foundation.NSDecimalNumber? {
+    @objc get
+  }
+  @objc dynamic public var store: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var price: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var advertiser: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var extraAssets: [Swift.String : Any]? {
+    @objc get
+  }
+  @objc dynamic public func handlesUserImpressions() -> Swift.Bool
+  @objc dynamic public func handlesUserClicks() -> Swift.Bool
+  @objc dynamic public func didRecordImpression()
+  @objc dynamic public func didRecordClickOnAsset(withName assetName: GoogleMobileAds.GADNativeAssetIdentifier, view: UIKit.UIView, viewController: UIKit.UIViewController)
+  @objc dynamic public func didUntrackView(_ view: UIKit.UIView?)
+}
+extension AppierAdMobMediation.APRAdMobNativeAd : AppierAds.NativeAdDelegate {
+  @objc dynamic public func onAdLoaded(nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onAdLoadedFailed(nativeAd: AppierAds.APRNativeAd, error: AppierAds.APRError)
+  @objc dynamic public func onAdImpressionRecorded(nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onAdImpressionRecordedFailed(nativeAd: AppierAds.APRNativeAd, error: AppierAds.APRError)
+  @objc dynamic public func onAdClickedRecorded(nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onAdClickedRecordedFailed(nativeAd: AppierAds.APRNativeAd, error: AppierAds.APRError)
+}
+extension AppierAds.APRAdExtras : GoogleMobileAds.GADAdNetworkExtras {
+}
