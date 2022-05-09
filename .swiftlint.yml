@@ -1,0 +1,23 @@
+line_length: 160
+
+identifier_name:
+  min_length: 1
+  max_length: 45
+
+type_name:
+  max_length: 50
+
+function_parameter_count:
+  warning: 8
+
+vertical_whitespace:
+  max_empty_lines: 2
+
+function_body_length: 60
+
+disabled_rules:
+  - cyclomatic_complexity
+
+excluded:
+  - vendor
+  - Derived
