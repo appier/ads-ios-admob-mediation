@@ -1,5 +1,5 @@
 PODS:
-  - AppierAds (0.1.13)
+  - AppierAds (0.1.15)
   - Google-Mobile-Ads-SDK (9.3.0):
     - GoogleAppMeasurement (< 9.0, >= 7.0)
     - GoogleUserMessagingPlatform (>= 1.1)
@@ -49,7 +49,7 @@ PODS:
   - PromisesObjC (2.1.0)
 
 DEPENDENCIES:
-  - AppierAds (~> 0.1.13)
+  - AppierAds (~> 0.1.15)
   - Google-Mobile-Ads-SDK (~> 9.3.0)
 
 SPEC REPOS:
@@ -63,7 +63,7 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
-  AppierAds: d4fb593fb83ae0eb4943af86130aaeaa7c77c830
+  AppierAds: 4c01b38c345763d29c4190b54b591c8251985568
   Google-Mobile-Ads-SDK: 2c8ad48ccc3839a5927f7d7c51505a7cd4f0b672
   GoogleAppMeasurement: 4c19f031220c72464d460c9daa1fb5d1acce958e
   GoogleUserMessagingPlatform: ab890ce5f6620f293a21b6bdd82e416a2c73aeca
@@ -71,6 +71,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
 
-PODFILE CHECKSUM: 396391b45566f6efecb85974de2353e9da5fd9d0
+PODFILE CHECKSUM: 8b46da8459f967c84f200ba78e0f43defafa9e50
 
 COCOAPODS: 1.11.3

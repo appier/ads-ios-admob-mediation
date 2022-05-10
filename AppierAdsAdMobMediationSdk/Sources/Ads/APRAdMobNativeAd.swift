@@ -115,9 +115,7 @@ extension APRAdMobNativeAd: GADMediationNativeAd {
 extension APRAdMobNativeAd: NativeAdDelegate {
     @objc public func onAdLoaded(nativeAd: APRNativeAd) {
         logger.debug("\(#function)")
-        DispatchQueue.main.sync {
-            self.mediationDelegate = self.completionHandler?(self, nil)
-        }
+        self.mediationDelegate = self.completionHandler?(self, nil)
     }
     
     @objc public func onAdLoadedFailed(nativeAd: APRNativeAd, error: APRError) {

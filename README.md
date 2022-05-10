@@ -1,6 +1,6 @@
 # Appier Meidation for AdMob iOS SDK
 
-This is Appier's official iOS mediation repository for AdMob SDK. The latest updated documentation can be found [here](TBD).
+This is Appier's official iOS mediation repository for AdMob SDK. The latest updated documentation can be found [here](https://docs.aps.appier.com/docs/admob-mediation-sdk-ios).
 
 Refer to [ads-ios-sample-swift](https://github.com/appier/ads-ios-sample-swift) for sample integrations.
 
@@ -19,8 +19,8 @@ Refer to [ads-ios-sample-swift](https://github.com/appier/ads-ios-sample-swift) 
 
 To integrate `AppierAdsAdMobMediation` into your Xcode project using CocoaPods, specify the frameworks in your `Podfile`
 ``` ruby
-pod 'AppierAdsAdMobMediation', '0.1.13'
-pod 'AppierAds', '0.1.13'
+pod 'AppierAdsAdMobMediation', '0.1.14'
+pod 'AppierAds', '0.1.15'
 pod 'Google-Mobile-Ads-SDK', '9.3.0'
 ```
 
