@@ -19,8 +19,8 @@ Refer to [ads-ios-sample-swift](https://github.com/appier/ads-ios-sample-swift) 
 
 To integrate `AppierAdsAdMobMediation` into your Xcode project using CocoaPods, specify the frameworks in your `Podfile`
 ``` ruby
-pod 'AppierAdsAdMobMediation', '0.1.14'
-pod 'AppierAds', '0.1.16'
+pod 'AppierAdsAdMobMediation', '1.0.0'
+pod 'AppierAds', '1.0.0'
 pod 'Google-Mobile-Ads-SDK', '9.3.0'
 ```
 
