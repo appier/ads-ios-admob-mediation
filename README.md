@@ -162,6 +162,7 @@ import AppierAdsAdMobMediation
 
 func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
   	// ...	
+    nativeAd.delegate = self
   
 		// when the advertiser name is `Appier`, the ad is provided by Appier.
   	if let advertiser = nativeAd.advertiser, advertiser == APRAdMobMediation.shared.advertiserName {
@@ -178,14 +179,11 @@ func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
         // required to make the ad clickable.
         // Note: this should always be done after populating the ad views.
         nativeAdView.nativeAd = nativeAd
-        nativeAd.delegate = self
     }
 }
 ```
 
-Appier provides `APRAdMobAdEventDelegate` to receive notification after Appier recorded impression/clicked event.
-Therefore, you can compare the performance data between AdMob, Appier and your app.
-If there are large discrenpencies, you can contact Appier techincal support team for advanced guidance.
+Appier provides `APRAdMobAdEventDelegate` to allow Apps to receive notifications after impression/click events are recorded by AppierSDK.
 
 ``` swift
 class AdMobNativeViewController: UIViewController, APRAdMobAdEventDelegate {
