@@ -1,5 +1,13 @@
 line_length: 160
 
+nesting:
+  type_level:
+    warning: 3
+    error: 6
+  statement_level:
+    warning: 5
+    error: 10
+
 identifier_name:
   min_length: 1
   max_length: 45

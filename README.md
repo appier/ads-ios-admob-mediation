@@ -19,9 +19,9 @@ Refer to [ads-ios-sample-swift](https://github.com/appier/ads-ios-sample-swift) 
 
 To integrate `AppierAdsAdMobMediation` into your Xcode project using CocoaPods, specify the frameworks in your `Podfile`
 ``` ruby
-pod 'AppierAdsAdMobMediation', '1.0.0'
-pod 'AppierAds', '1.0.0'
-pod 'Google-Mobile-Ads-SDK', '9.3.0'
+pod 'AppierAdsAdMobMediation', '1.1.0'
+pod 'AppierAds', '1.0.1'
+pod 'Google-Mobile-Ads-SDK', '9.5.0'
 ```
 
 ## Initialize the Ads SDK
@@ -180,6 +180,30 @@ func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
         nativeAdView.nativeAd = nativeAd
         nativeAd.delegate = self
     }
+}
+```
+
+Appier provides `APRAdMobAdEventDelegate` to receive notification after Appier recorded impression/clicked event.
+Therefore, you can compare the performance data between AdMob, Appier and your app.
+If there are large discrenpencies, you can contact Appier techincal support team for advanced guidance.
+
+``` swift
+class AdMobNativeViewController: UIViewController, APRAdMobAdEventDelegate {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        APRAdMobAdManager.shared.eventDelegate = self  // Register APRAdMobAdEventDelegate
+    }
+
+    func onNativeAdImpressionRecorded(nativeAd: APRAdMobNativeAd) {
+        APRLogger.controller.debug("adunit id: \(nativeAd.adUnitId)")  // Get ad unit id
+        APRLogger.controller.debug("zone id: \(nativeAd.zoneId)")  // Get zone id
+    }
+    
+    func onNativeAdImpressionRecordedFailed(nativeAd: APRAdMobNativeAd, error: APRError) {}
+    
+    func onNativeAdClickedRecorded(nativeAd: APRAdMobNativeAd) {}
+    
+    func onNativeAdClickedRecordedFailed(nativeAd: APRAdMobNativeAd, error: APRError) {}
 }
 ```
 

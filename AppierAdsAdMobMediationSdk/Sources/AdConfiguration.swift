@@ -4,12 +4,12 @@ import AppierAds
 class AdConfiguration {
     private let adConfiguration: GADMediationAdConfiguration
     private let localExtras: APRAdExtras
-    
+
     struct ServerExtras: Codable {
         var adUnitId: String?
         var zoneId: String?
     }
-    
+
     init(with adConfiguration: GADMediationAdConfiguration) {
         self.adConfiguration = adConfiguration
         self.localExtras = adConfiguration.extras as? APRAdExtras ?? APRAdExtras()
@@ -19,7 +19,7 @@ class AdConfiguration {
             syncExtras(with: serverExtras)
         }
     }
-    
+
     private func syncExtras(with serverExtras: ServerExtras) {
         if let adUnitId = serverExtras.adUnitId {
             localExtras.set(key: .adUnitId, value: adUnitId)
@@ -28,7 +28,7 @@ class AdConfiguration {
             localExtras.set(key: .zoneId, value: zoneId)
         }
     }
-    
+
     func getLocalExtras() -> APRAdExtras {
         return localExtras
     }

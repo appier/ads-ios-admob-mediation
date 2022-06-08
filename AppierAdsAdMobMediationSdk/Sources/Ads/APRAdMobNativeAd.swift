@@ -5,18 +5,28 @@ import GoogleMobileAds
     private var nativeAd: APRNativeAd?
     private var mediationDelegate: GADMediationNativeAdEventDelegate?
     private var completionHandler: GADMediationNativeLoadCompletionHandler?
-    
+
+    public private(set) var adUnitId: String
+    public private(set) var zoneId: String
+
     override init() {
+        adUnitId = ""
+        zoneId = ""
         super.init()
     }
-    
+
     func load(adConfiguration: AdConfiguration, completionHandler: @escaping GADMediationNativeLoadCompletionHandler) {
         let localExtras = adConfiguration.getLocalExtras()
         guard let adUnitId = localExtras.get(key: .adUnitId) as? String else {
             mediationDelegate = completionHandler(self, APRError(type: .adUnitIdError))
             return
         }
-
+        guard let zoneId = localExtras.get(key: .zoneId) as? String else {
+            mediationDelegate = completionHandler(self, APRError(type: .zoneIdError))
+            return
+        }
+        self.adUnitId = adUnitId
+        self.zoneId = zoneId
         self.completionHandler = completionHandler
         nativeAd = .init(adUnitId: APRAdMobAdUnitId(adUnitId))
         nativeAd?.set(extras: localExtras)
@@ -26,7 +36,6 @@ import GoogleMobileAds
 }
 
 extension APRAdMobNativeAd: GADMediationNativeAd {
-    
     @objc public var headline: String? {
         return nativeAd?.title
     }
@@ -73,7 +82,7 @@ extension APRAdMobNativeAd: GADMediationNativeAd {
         return APRAdMobMediation.shared.advertiserName
     }
 
-    @objc public var extraAssets: [String : Any]? {
+    @objc public var extraAssets: [String: Any]? {
         guard let nativeAd = nativeAd else {
             return .none
         }
@@ -83,20 +92,20 @@ extension APRAdMobNativeAd: GADMediationNativeAd {
         }
         return assets
     }
-    
+
     public func handlesUserImpressions() -> Bool {
         return false
     }
-    
+
     public func handlesUserClicks() -> Bool {
         return false
     }
 
-    @objc public func didRecordImpression() {
+    public func didRecordImpression() {
         logger.debug("\(#function)")
         nativeAd?.recordImpression()
     }
-    
+
     public func didRecordClickOnAsset(withName assetName: GADNativeAssetIdentifier, view: UIView, viewController: UIViewController) {
         logger.debug("\(#function)")
         if assetName == .advertiserAsset {
@@ -105,7 +114,7 @@ extension APRAdMobNativeAd: GADMediationNativeAd {
             nativeAd?.clickAdView()
         }
     }
-    
+
     public func didUntrackView(_ view: UIView?) {
         logger.debug("\(#function)")
         nativeAd?.untrackAdView()
@@ -117,27 +126,29 @@ extension APRAdMobNativeAd: NativeAdDelegate {
         logger.debug("\(#function)")
         self.mediationDelegate = self.completionHandler?(self, nil)
     }
-    
+
     @objc public func onAdLoadedFailed(nativeAd: APRNativeAd, error: APRError) {
         logger.debug("\(#function)")
-        self.mediationDelegate = self.completionHandler?(self, error)
+        self.mediationDelegate = self.completionHandler?(nil, error)
     }
-    
+
     @objc public func onAdImpressionRecorded(nativeAd: APRNativeAd) {
         logger.debug("\(#function)")
-        mediationDelegate?.reportImpression()
+        APRAdMobAdManager.shared.eventDelegate?.onNativeAdImpressionRecorded?(nativeAd: self)
     }
-    
+
     @objc public func onAdImpressionRecordedFailed(nativeAd: APRNativeAd, error: APRError) {
         logger.debug("\(#function)")
+        APRAdMobAdManager.shared.eventDelegate?.onNativeAdImpressionRecordedFailed?(nativeAd: self, error: error)
     }
-    
+
     @objc public func onAdClickedRecorded(nativeAd: APRNativeAd) {
         logger.debug("\(#function)")
-        mediationDelegate?.reportClick()
+        APRAdMobAdManager.shared.eventDelegate?.onNativeAdClickedRecorded?(nativeAd: self)
     }
 
     @objc public func onAdClickedRecordedFailed(nativeAd: APRNativeAd, error: APRError) {
         logger.debug("\(#function)")
+        APRAdMobAdManager.shared.eventDelegate?.onNativeAdClickedRecordedFailed?(nativeAd: self, error: error)
     }
 }

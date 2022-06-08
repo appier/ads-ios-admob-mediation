@@ -4,8 +4,8 @@ workspace 'AppierAdsAdMobMediationWorkspace'
 
 use_frameworks!
 def pods
-  pod 'Google-Mobile-Ads-SDK', '~>9.3.0'
-  pod 'AppierAds', '~>1.0.0'
+  pod 'Google-Mobile-Ads-SDK', '~>9.5'
+  pod 'AppierAds', '~>1.0'
 end
 
 # ignore all warnings from all pods
