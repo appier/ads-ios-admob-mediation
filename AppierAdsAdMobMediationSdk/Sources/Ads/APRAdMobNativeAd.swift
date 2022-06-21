@@ -8,6 +8,7 @@ import GoogleMobileAds
 
     public private(set) var adUnitId: String
     public private(set) var zoneId: String
+    public private(set) var appInfo: Any?
 
     override init() {
         adUnitId = ""
@@ -27,6 +28,7 @@ import GoogleMobileAds
         }
         self.adUnitId = adUnitId
         self.zoneId = zoneId
+        self.appInfo = localExtras.get(key: .appInfo)
         self.completionHandler = completionHandler
         nativeAd = .init(adUnitId: APRAdMobAdUnitId(adUnitId))
         nativeAd?.set(extras: localExtras)
@@ -89,6 +91,9 @@ extension APRAdMobNativeAd: GADMediationNativeAd {
         var assets: [String: Any] = [:]
         if let privacyInformationImage = nativeAd.privacyInformationImage {
             assets[APRAdMobMediation.shared.advertiserIcon] = privacyInformationImage
+        }
+        if let appInfo = appInfo {
+            assets[APRAdMobMediation.shared.appInfo] = appInfo
         }
         return assets
     }

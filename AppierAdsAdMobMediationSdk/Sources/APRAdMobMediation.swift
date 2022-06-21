@@ -8,6 +8,7 @@ import AppierAds
 
     private override init() { super.init() }
 
+    @objc public let appInfo = "app_info"
     @objc public let advertiserIcon = "advertiser_icon"
     @objc public let advertiserName = "Appier"
 
