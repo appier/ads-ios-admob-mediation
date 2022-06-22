@@ -19,8 +19,8 @@ Refer to [ads-ios-sample-swift](https://github.com/appier/ads-ios-sample-swift) 
 
 To integrate `AppierAdsAdMobMediation` into your Xcode project using CocoaPods, specify the frameworks in your `Podfile`
 ``` ruby
-pod 'AppierAdsAdMobMediation', '1.1.0'
-pod 'AppierAds', '1.0.1'
+pod 'AppierAdsAdMobMediation', '1.2.0'
+pod 'AppierAds', '1.1.0'
 pod 'Google-Mobile-Ads-SDK', '9.5.0'
 ```
 
@@ -130,6 +130,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ### Native Ads Integration
 
 To render Appier's native ads via AdMob mediation, you need to provide `<your_ad_unit_id_from_admob>` and `<your_zone_id_from_appier>`. You can either pass through `localExtras` or `serverExtras`.
+Also, if you want to append any information of ad, you can pass it through `localExtras` and you will receive the information when events callback.
 
 ``` swift
 import AppierAds
@@ -137,9 +138,12 @@ import GoogleMobileAds
 import AppierAdsAdMobMediation
 
 
-// Build Request
+// Set localExtras
 let appierExtras = APRAdExtras()
 appierExtras.set(key: .adUnitId, value: "<your_ad_unit_id_from_admob>")
+appierExtras.set(key: .appInfo, value: SampleAppInfo())  // pass additional information
+
+// Build Request
 let adLoader = GADAdLoader(
 	  adUnitID: "<your_ad_unit_id_from_admob>",
   	rootViewController: self,
@@ -168,6 +172,9 @@ func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
   	if let advertiser = nativeAd.advertiser, advertiser == APRAdMobMediation.shared.advertiserName {
       	// We provide advertiser image for user to get our advertising ploicy.
 				(nativeAdView.advertiserView as? UIImageView)?.image = nativeAd.extraAssets?[APRAdMobMediation.shared.advertiserIcon] as? UIImage
+
+        // Get additional information from APRAdExtras.
+        let sampleAppInfo = nativeAd.extrasAssets?[APRAdMobMediation.shared.appInfo] as? SampleAppInfo
       
       	// ...
 	      (nativeAdView.headlineView as? UILabel)?.text = nativeAd.headline
@@ -195,6 +202,8 @@ class AdMobNativeViewController: UIViewController, APRAdMobAdEventDelegate {
     func onNativeAdImpressionRecorded(nativeAd: APRAdMobNativeAd) {
         APRLogger.controller.debug("adunit id: \(nativeAd.adUnitId)")  // Get ad unit id
         APRLogger.controller.debug("zone id: \(nativeAd.zoneId)")  // Get zone id
+        
+        let sampleAppInfo = nativeAd.appInfo as? SampleAppInfo // Get additional information from APRAdExtras
     }
     
     func onNativeAdImpressionRecordedFailed(nativeAd: APRAdMobNativeAd, error: APRError) {}

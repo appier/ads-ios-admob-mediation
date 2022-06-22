@@ -8,7 +8,7 @@ import GoogleMobileAds
 
     private override init() { super.init() }
 
-    @objc public var eventDelegate: APRAdMobAdEventDelegate?
+    @objc public weak var eventDelegate: APRAdMobAdEventDelegate?
 }
 
 @objc public protocol APRAdMobAdEventDelegate: AnyObject {

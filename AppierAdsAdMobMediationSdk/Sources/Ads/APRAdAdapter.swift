@@ -2,7 +2,6 @@ import GoogleMobileAds
 import AppierAds
 
 @objc public class APRAdAdapter: NSObject, GADMediationAdapter {
-    var extras: APRAdExtras?
     var nativeAd: APRAdMobNativeAd?
 
     @objc public static func adapterVersion() -> GADVersionNumber {
@@ -43,9 +42,4 @@ import AppierAds
         nativeAd = .init()
         nativeAd?.load(adConfiguration: .init(with: adConfiguration), completionHandler: completionHandler)
     }
-}
-
-struct AdMobServerExtras: Codable {
-    var adUnitId: String?
-    var zoneId: String?
 }
