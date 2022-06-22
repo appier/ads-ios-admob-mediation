@@ -19,7 +19,7 @@ let framework = Target(
     ),
     actions: [lintAction],
     settings: Settings(base: [
-        "MARKETING_VERSION": .string("1.1.0"),
+        "MARKETING_VERSION": .string("1.2.0"),
         "CURRENT_PROJECT_VERSION": .string("0"),
         "SKIP_INSTALL": "NO",
         "BUILD_LIBRARY_FOR_DISTRIBUTION": "YES",
