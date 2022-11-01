@@ -13,7 +13,7 @@ jobs:
         default: ""
 
     macos:
-      xcode: 13.3.1
+      xcode: 14.1.0
 
     steps:
       - add_ssh_keys:
@@ -68,7 +68,7 @@ jobs:
         type: string
 
     macos:
-      xcode: 13.3.1
+      xcode: 14.1.0
 
     environment:
       FL_OUTPUT_DIR: output
@@ -116,7 +116,7 @@ jobs:
         type: string
 
     macos:
-      xcode: 13.3.1
+      xcode: 14.1.0
 
     steps:
       - checkout_custom:
@@ -141,7 +141,7 @@ jobs:
 
   github_release:
     macos:
-      xcode: 13.3.1
+      xcode: 14.1.0
 
     steps:
       - attach_workspace:
