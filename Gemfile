@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "fastlane", "~>2.205.1"
+gem "fastlane", "~>2.210.1"
 gem "slather", "~>2.7.2"
 gem "cocoapods", "~>1.11.3"
-gem "nokogiri", ">=1.13.6"
+gem "nokogiri", "~>1.13.9"
