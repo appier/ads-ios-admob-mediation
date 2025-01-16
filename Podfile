@@ -15,6 +15,6 @@ target 'AppierAdsAdMobMediation' do
   # Pods for AppierAdsAdMobMediation
   pods
   
-  project 'AppierAdsAdMobMediationSdk/AppierAdsAdMobMediationSdk.xcodeproj'
+  project 'AppierAdsAdMobMediationSdk.xcodeproj'
 end
 
