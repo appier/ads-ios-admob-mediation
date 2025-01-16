@@ -353,14 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5B43EAD2D38E8D400B31ADC /* APRAdMobAdManager.swift in Sources */,
-				F5B43EAF2D38E8D400B31ADC /* Utlities.swift in Sources */,
-				F5B43EB02D38E8D400B31ADC /* AppierAdUnitIdentifier.swift in Sources */,
-				F5B43EB12D38E8D400B31ADC /* APRAdExtras.swift in Sources */,
-				F5B43EB22D38E8D400B31ADC /* APRAdAdapter.swift in Sources */,
-				F5B43EB32D38E8D400B31ADC /* APRAdMobNativeAd.swift in Sources */,
-				F5B43EB42D38E8D400B31ADC /* APRAdMobMediation.swift in Sources */,
 				F5B43EB52D38E8D400B31ADC /* AdConfiguration.swift in Sources */,
+				F5B43EB02D38E8D400B31ADC /* AppierAdUnitIdentifier.swift in Sources */,
+				F5B43EB22D38E8D400B31ADC /* APRAdAdapter.swift in Sources */,
+				F5B43EB12D38E8D400B31ADC /* APRAdExtras.swift in Sources */,
+				F5B43EAD2D38E8D400B31ADC /* APRAdMobAdManager.swift in Sources */,
+				F5B43EB42D38E8D400B31ADC /* APRAdMobMediation.swift in Sources */,
+				F5B43EB32D38E8D400B31ADC /* APRAdMobNativeAd.swift in Sources */,
+				F5B43EAF2D38E8D400B31ADC /* Utlities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
