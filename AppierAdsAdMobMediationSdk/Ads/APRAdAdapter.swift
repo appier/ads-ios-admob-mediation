@@ -37,7 +37,8 @@ import AppierAds
 
     @objc public func loadNativeAd(
         for adConfiguration: GADMediationNativeAdConfiguration,
-        completionHandler: @escaping GADMediationNativeLoadCompletionHandler) {
+        completionHandler: @escaping GADMediationNativeLoadCompletionHandler
+    ) {
         logger.debug("\(#function)")
         nativeAd = .init()
         nativeAd?.load(adConfiguration: .init(with: adConfiguration), completionHandler: completionHandler)

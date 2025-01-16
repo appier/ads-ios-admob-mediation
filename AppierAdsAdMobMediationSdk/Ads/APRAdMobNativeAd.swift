@@ -126,33 +126,50 @@ extension APRAdMobNativeAd: GADMediationNativeAd {
     }
 }
 
-extension APRAdMobNativeAd: NativeAdDelegate {
-    @objc public func onAdLoaded(nativeAd: APRNativeAd) {
+extension APRAdMobNativeAd: APRNativeAdDelegate {
+    public func onAdNoBid(_ nativeAd: AppierAds.APRNativeAd) {
+        logger.debug("\(#function)")
+    }
+
+    @objc public func onAdLoaded(_ nativeAd: APRNativeAd) {
         logger.debug("\(#function)")
         self.mediationDelegate = self.completionHandler?(self, nil)
     }
 
-    @objc public func onAdLoadedFailed(nativeAd: APRNativeAd, error: APRError) {
+    @objc public func onAdLoadedFailed(
+        _ nativeAd: APRNativeAd,
+        error: APRError
+    ) {
         logger.debug("\(#function)")
         self.mediationDelegate = self.completionHandler?(nil, error)
     }
 
-    @objc public func onAdImpressionRecorded(nativeAd: APRNativeAd) {
+    public func onAdShown(_ nativeAd: AppierAds.APRNativeAd) {
+        logger.debug("\(#function)")
+    }
+
+    @objc public func onAdImpressionRecorded(_ nativeAd: APRNativeAd) {
         logger.debug("\(#function)")
         APRAdMobAdManager.shared.eventDelegate?.onNativeAdImpressionRecorded?(nativeAd: self)
     }
 
-    @objc public func onAdImpressionRecordedFailed(nativeAd: APRNativeAd, error: APRError) {
+    @objc public func onAdImpressionRecordedFailed(
+        _ nativeAd: APRNativeAd,
+        error: APRError
+    ) {
         logger.debug("\(#function)")
         APRAdMobAdManager.shared.eventDelegate?.onNativeAdImpressionRecordedFailed?(nativeAd: self, error: error)
     }
 
-    @objc public func onAdClickedRecorded(nativeAd: APRNativeAd) {
+    @objc public func onAdClickedRecorded(_ nativeAd: APRNativeAd) {
         logger.debug("\(#function)")
         APRAdMobAdManager.shared.eventDelegate?.onNativeAdClickedRecorded?(nativeAd: self)
     }
 
-    @objc public func onAdClickedRecordedFailed(nativeAd: APRNativeAd, error: APRError) {
+    @objc public func onAdClickedRecordedFailed(
+        _ nativeAd: APRNativeAd,
+        error: APRError
+    ) {
         logger.debug("\(#function)")
         APRAdMobAdManager.shared.eventDelegate?.onNativeAdClickedRecordedFailed?(nativeAd: self, error: error)
     }
