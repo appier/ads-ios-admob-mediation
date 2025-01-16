@@ -38,7 +38,6 @@ import GoogleMobileAds
         bannerAds?.delegate = self
         bannerAds?.load()
     }
-
 }
 
 @objc

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F05093387A5D0DC84FC5A4E8 /* Pods_AppierAdsAdMobMediation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4D11FAFE5B5CFBD0D96857 /* Pods_AppierAdsAdMobMediation.framework */; };
 		F58849982D38EEED00496617 /* APRAdMobBannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58849972D38EEE700496617 /* APRAdMobBannerAd.swift */; };
+		F588499A2D3908D700496617 /* APRAdMobInterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58849992D3908CD00496617 /* APRAdMobInterstitialAd.swift */; };
 		F5B43EAD2D38E8D400B31ADC /* APRAdMobAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B43EA92D38E8D400B31ADC /* APRAdMobAdManager.swift */; };
 		F5B43EAF2D38E8D400B31ADC /* Utlities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B43EAB2D38E8D400B31ADC /* Utlities.swift */; };
 		F5B43EB02D38E8D400B31ADC /* AppierAdUnitIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B43EA72D38E8D400B31ADC /* AppierAdUnitIdentifier.swift */; };
@@ -59,6 +60,7 @@
 		BB0EC325E97AFF863966CC54 /* Pods-AppierAdsAdMobMediation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppierAdsAdMobMediation.debug.xcconfig"; path = "Target Support Files/Pods-AppierAdsAdMobMediation/Pods-AppierAdsAdMobMediation.debug.xcconfig"; sourceTree = "<group>"; };
 		DE4D11FAFE5B5CFBD0D96857 /* Pods_AppierAdsAdMobMediation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppierAdsAdMobMediation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58849972D38EEE700496617 /* APRAdMobBannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APRAdMobBannerAd.swift; sourceTree = "<group>"; };
+		F58849992D3908CD00496617 /* APRAdMobInterstitialAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APRAdMobInterstitialAd.swift; sourceTree = "<group>"; };
 		F5B43E9F2D38E8D400B31ADC /* APRAdAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APRAdAdapter.swift; sourceTree = "<group>"; };
 		F5B43EA02D38E8D400B31ADC /* APRAdMobNativeAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APRAdMobNativeAd.swift; sourceTree = "<group>"; };
 		F5B43EA22D38E8D400B31ADC /* AppierAdsAdMobMediationTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppierAdsAdMobMediationTests.plist; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				F5B43E9F2D38E8D400B31ADC /* APRAdAdapter.swift */,
 				F58849972D38EEE700496617 /* APRAdMobBannerAd.swift */,
+				F58849992D3908CD00496617 /* APRAdMobInterstitialAd.swift */,
 				F5B43EA02D38E8D400B31ADC /* APRAdMobNativeAd.swift */,
 			);
 			path = Ads;
@@ -362,6 +365,7 @@
 				F5B43EB12D38E8D400B31ADC /* APRAdExtras.swift in Sources */,
 				F5B43EAD2D38E8D400B31ADC /* APRAdMobAdManager.swift in Sources */,
 				F58849982D38EEED00496617 /* APRAdMobBannerAd.swift in Sources */,
+				F588499A2D3908D700496617 /* APRAdMobInterstitialAd.swift in Sources */,
 				F5B43EB42D38E8D400B31ADC /* APRAdMobMediation.swift in Sources */,
 				F5B43EB32D38E8D400B31ADC /* APRAdMobNativeAd.swift in Sources */,
 				F5B43EAF2D38E8D400B31ADC /* Utlities.swift in Sources */,
