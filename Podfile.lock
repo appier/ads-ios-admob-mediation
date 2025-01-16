@@ -6,7 +6,7 @@ PODS:
 
 DEPENDENCIES:
   - AppierAds (= 1.2.1)
-  - Google-Mobile-Ads-SDK (~> 11.2.0)
+  - Google-Mobile-Ads-SDK (~> 11.2)
 
 SPEC REPOS:
   trunk:
@@ -19,6 +19,6 @@ SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 5a6d005a6cb5b5e8f4c7b69ca05cdea79c181139
   GoogleUserMessagingPlatform: b1ad7bb1ee3ce64749d4fec24f667b36e45c396c
 
-PODFILE CHECKSUM: 6e8d9a4af860f3a86707fe399d411b2dc395b501
+PODFILE CHECKSUM: de33dceb9525fbf7ff96c9280986a320122e82cf
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2
