@@ -35,7 +35,7 @@
                BlueprintIdentifier = "DEDFFABE56686E9308849024"
                BuildableName = "AppierAdsAdMobMediation.framework"
                BlueprintName = "AppierAdsAdMobMediation"
-               ReferencedContainer = "container:AppierAdsAdMobMediationSdk.xcodeproj">
+               ReferencedContainer = "container:AppierAdsAdMobMediation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -53,16 +53,6 @@
          </EnvironmentVariable>
       </EnvironmentVariables>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0B6364DB5808E7EA96E5EBAF"
-               BuildableName = "AppierAdsAdMobMediationTests.xctest"
-               BlueprintName = "AppierAdsAdMobMediationTests"
-               ReferencedContainer = "container:AppierAdsAdMobMediationSdk.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -75,15 +65,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DEDFFABE56686E9308849024"
-            BuildableName = "AppierAdsAdMobMediation.framework"
-            BlueprintName = "AppierAdsAdMobMediation"
-            ReferencedContainer = "container:AppierAdsAdMobMediationSdk.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -97,7 +78,7 @@
             BlueprintIdentifier = "DEDFFABE56686E9308849024"
             BuildableName = "AppierAdsAdMobMediation.framework"
             BlueprintName = "AppierAdsAdMobMediation"
-            ReferencedContainer = "container:AppierAdsAdMobMediationSdk.xcodeproj">
+            ReferencedContainer = "container:AppierAdsAdMobMediation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

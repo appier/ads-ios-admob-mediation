@@ -5,7 +5,7 @@ workspace 'AppierAdsAdMobMediationWorkspace'
 use_frameworks!
 def pods
   pod 'Google-Mobile-Ads-SDK', '~>11.2'
-  pod 'AppierAds', '1.2.1'
+  pod 'AppierAds', '~> 1.2.0'
 end
 
 # ignore all warnings from all pods
@@ -15,6 +15,6 @@ target 'AppierAdsAdMobMediation' do
   # Pods for AppierAdsAdMobMediation
   pods
   
-  project 'AppierAdsAdMobMediationSdk.xcodeproj'
+  project 'AppierAdsAdMobMediation.xcodeproj'
 end
 
