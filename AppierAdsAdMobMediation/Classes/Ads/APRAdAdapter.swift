@@ -3,6 +3,8 @@ import AppierAds
 
 @objc public class APRAdAdapter: NSObject, GADMediationAdapter {
     var nativeAd: APRAdMobNativeAd?
+    var bannerAd: APRAdMobBannerAd?
+    var interstitialAd: APRAdMobInterstitialAd?
 
     @objc public static func adapterVersion() -> GADVersionNumber {
         let numbers = versionNumbers(versionString: APRAdMobMediation.shared.version)
@@ -37,9 +39,36 @@ import AppierAds
 
     @objc public func loadNativeAd(
         for adConfiguration: GADMediationNativeAdConfiguration,
-        completionHandler: @escaping GADMediationNativeLoadCompletionHandler) {
+        completionHandler: @escaping GADMediationNativeLoadCompletionHandler
+    ) {
         logger.debug("\(#function)")
         nativeAd = .init()
         nativeAd?.load(adConfiguration: .init(with: adConfiguration), completionHandler: completionHandler)
+    }
+
+    @objc public func loadBanner(
+        for adConfiguration: GADMediationBannerAdConfiguration,
+        completionHandler: @escaping GADMediationBannerLoadCompletionHandler
+    ) {
+        logger.debug("\(#function)")
+        bannerAd = .init()
+        bannerAd?
+            .load(
+                adConfiguration: .init(with: adConfiguration),
+                completionHandler: completionHandler
+            )
+    }
+
+    @objc public func loadInterstitial(
+        for adConfiguration: GADMediationInterstitialAdConfiguration,
+        completionHandler: @escaping GADMediationInterstitialLoadCompletionHandler
+    ) {
+        logger.debug("\(#function)")
+        interstitialAd = .init()
+        interstitialAd?
+            .load(
+                adConfiguration: .init(with: adConfiguration),
+                completionHandler: completionHandler
+            )
     }
 }

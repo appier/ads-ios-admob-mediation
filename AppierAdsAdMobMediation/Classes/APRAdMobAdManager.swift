@@ -16,4 +16,9 @@ import GoogleMobileAds
     @objc optional func onNativeAdImpressionRecordedFailed(nativeAd: APRAdMobNativeAd, error: APRError)
     @objc optional func onNativeAdClickedRecorded(nativeAd: APRAdMobNativeAd)
     @objc optional func onNativeAdClickedRecordedFailed(nativeAd: APRAdMobNativeAd, error: APRError)
+
+    @objc optional func onBannerAdImpressionRecorded(bannerAd: APRAdMobBannerAd)
+    @objc optional func onBannerAdImpressionRecordedFailed(bannerAd: APRAdMobBannerAd, error: APRError)
+    @objc optional func onBannerAdClickedRecorded(bannerAd: APRAdMobBannerAd)
+    @objc optional func onBannerAdClickedRecordedFailed(bannerAd: APRAdMobBannerAd, error: APRError)
 }
