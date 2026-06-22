@@ -4,166 +4,136 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>GoogleMobileAdsResources.bundle/Info.plist</key>
-		<data>
-		v+J20a6nV28/MP3DKpaAVm5+qs4=
-		</data>
-		<key>GoogleMobileAdsResources.bundle/PrivacyInfo.xcprivacy</key>
-		<data>
-		VWCA3MeaiPMoOAS1uOteTSLX8js=
-		</data>
 		<key>Headers/AppierAdsAdMobMediation-Swift.h</key>
 		<data>
-		gsus4rwTQ/Yoc7IF6ktwxyB/7YE=
+		4lmZN1IQcCXHh0GhMkh5nUMHYME=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		GuhelsSbvPGwRyMzj6zpio3zVXQ=
+		hdUYNRz7qNSY/jRle5DFagd9l9I=
 		</data>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		TbXGD+vZyWU3JIYD9Ois02bpv8k=
+		HJGflj5lY56AXSnyh1NDrvRXS9o=
 		</data>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		QysvoSGUhooKeWv2+ehQOQrm/tY=
+		xwO3jqtmzGAhO7LsdWrOKFQoX3A=
 		</data>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		T4NuAE2dSr84YYJzI0u0Z3PBAGo=
+		gCPaI34l7sEv9Qn6HNfoyDoUMuQ=
 		</data>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		QysvoSGUhooKeWv2+ehQOQrm/tY=
+		xwO3jqtmzGAhO7LsdWrOKFQoX3A=
 		</data>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZO37Fmsdsq79e/Et5UHQ2GhBHd8=
+		XNHKkW/Rfu1FObqC10ZfBqcGdcI=
 		</data>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		TbXGD+vZyWU3JIYD9Ois02bpv8k=
+		HJGflj5lY56AXSnyh1NDrvRXS9o=
 		</data>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		CPxV0yAHlsInqGMicEVCIsZYdlQ=
+		GD0l0pz1EyfxOrcVYn31zPm2X+A=
 		</data>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		cHmoOMEHFF6YHOPuklvURfBszr0=
+		MptuKMiwnlrpX+8nzH1sLKG7Bh0=
 		</data>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		CPxV0yAHlsInqGMicEVCIsZYdlQ=
+		GD0l0pz1EyfxOrcVYn31zPm2X+A=
 		</data>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iE0wIJOKdQAj/l7V2iECqg9ye9k=
+		V7SygGmPkkp8nFwdmzwMJZiPbqU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		EHt/NBFUzcGvMfwjsM2SYMI9A20=
 		</data>
-		<key>UserMessagingPlatformResources.bundle/Info.plist</key>
-		<data>
-		RJnsx2Hfe1jKBYpW7wMmPyxCeVM=
-		</data>
-		<key>UserMessagingPlatformResources.bundle/PrivacyInfo.xcprivacy</key>
-		<data>
-		k9OFlDPBRWfteJ+bfG12WAoBuls=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>GoogleMobileAdsResources.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nM8lyJD4Mj8vpQ1U6X+iO5uwrcq5TW7THwjHQ3k5FhE=
-			</data>
-		</dict>
-		<key>GoogleMobileAdsResources.bundle/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			afsRJYL8I/wGxjXJYdJio/e0tWVNKEeHSR3jAA2t+dI=
-			</data>
-		</dict>
 		<key>Headers/AppierAdsAdMobMediation-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WX7LhyuPBzol3zQ0TUeRWD2WdwGfMTGp7eyif8ElLJU=
+			MinzB2Cyni5AvPzeaA6GRQge9yrTraB/8NU2wUW9h2E=
 			</data>
 		</dict>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zs1e8MktVP7tqpSR77dvHiROTVXgQzDi3azoJNA4CTU=
+			6Xj6t01fv+qchCFyE9a/WHLK3uGlMM1NlEfpf/M0KBs=
 			</data>
 		</dict>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NZJZSZSRKKLB2KktBe8c/6Q/ru6j2e3XvjYlOMOJIOo=
+			wA9dsR6SpbsTA2NAlCWoy+rsfbndPflo0wEc/4iKn0g=
 			</data>
 		</dict>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			luTqa9goFM5Lc9u7pbLs3MA8o1+qH5j20Bzz49zbIrs=
+			eMNm+ryuw/TZ77LbhysvTfsLTDEJ+xje1ZT2yQ/LmM0=
 			</data>
 		</dict>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NZJZSZSRKKLB2KktBe8c/6Q/ru6j2e3XvjYlOMOJIOo=
+			wA9dsR6SpbsTA2NAlCWoy+rsfbndPflo0wEc/4iKn0g=
 			</data>
 		</dict>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I6AcBeiDG2UIUN1Am3WvqwhbIEcBXXa6q3SH7a6dmBA=
+			D78YQNQ553UH5hjIhMD1cwE5YREk6wLBw617bTzNPZM=
 			</data>
 		</dict>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zs1e8MktVP7tqpSR77dvHiROTVXgQzDi3azoJNA4CTU=
+			6Xj6t01fv+qchCFyE9a/WHLK3uGlMM1NlEfpf/M0KBs=
 			</data>
 		</dict>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8zFlNdC76s+1JA980mSoqRSAUlcIxzRIYTmO6OPqy8c=
+			JbPkGCkXvOKFBR2mjBLPsRKbkVNTTQ7p4wtkS4XVJSk=
 			</data>
 		</dict>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H9fetST1cmjtsW68HQrLrLgRit+wkbSQ+wi9P2+Scqk=
+			rnYYJPdeXK/ZvKjMpPr6Wmn3ud85gGxWoDu0qKu1h18=
 			</data>
 		</dict>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8zFlNdC76s+1JA980mSoqRSAUlcIxzRIYTmO6OPqy8c=
+			JbPkGCkXvOKFBR2mjBLPsRKbkVNTTQ7p4wtkS4XVJSk=
 			</data>
 		</dict>
 		<key>Modules/AppierAdsAdMobMediation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tCtyT7oU9pJkr7hYHSXZoP1nr0gxvHbgEC8aTXxh+bU=
+			/eXcxt8rSV9ADMR5aPiTmFVuTe/0LBIWw24+dL0lZbY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -171,20 +141,6 @@
 			<key>hash2</key>
 			<data>
 			xXo1ivbLlLUbjrxMGQTWZrZC0ONQql1PiSMNhk/TWKk=
-			</data>
-		</dict>
-		<key>UserMessagingPlatformResources.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ggxjqaRBjT+Tod4V+ncxqcuZgdTXWcWJUUwP0KPH60U=
-			</data>
-		</dict>
-		<key>UserMessagingPlatformResources.bundle/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			RbetuZ/NLZYqHIAPv8wTJbV6f6QWX0FhgjI7tf/pyQA=
 			</data>
 		</dict>
 	</dict>
