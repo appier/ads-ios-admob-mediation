@@ -25,7 +25,7 @@ jobs:
           github-token: ${{ secrets.DEV_REPO_DISPATCH_TOKEN }}
           script: |
             await github.rest.repos.createDispatchEvent({
-              owner: 'appier',
+              owner: 'plaxieappier',
               repo: 'appier-ads-ios-admob-mediation',
               event_type: 'release_merged',
               client_payload: {
