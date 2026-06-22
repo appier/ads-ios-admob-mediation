@@ -11,7 +11,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", from: "12.4.0")
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", from: "12.4.0"),
+        .package(url: "https://github.com/appier/ads-ios-sdk", from: "1.2.1")
     ],
     targets: [
         .binaryTarget(
@@ -22,7 +23,8 @@ let package = Package(
             name: "AppierAdsAdMobMediationWrapper",
             dependencies: [
                 .target(name: "AppierAdsAdMobMediation"),
-                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads")
+                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
+                .product(name: "AppierAds", package: "ads-ios-sdk")
             ],
             path: "Sources/AppierAdsAdMobMediationWrapper"
         )
