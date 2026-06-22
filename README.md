@@ -1,27 +1,40 @@
-# Appier Meidation for AdMob iOS SDK
+# Appier Mediation for AdMob iOS SDK
 
-This is Appier's official iOS mediation repository for AdMob SDK. The latest updated documentation can be found [here](https://docs.aps.appier.com/docs/admob-mediation-sdk-ios).
+This is Appier's official iOS mediation adapter for the Google Mobile Ads (AdMob) SDK. The latest documentation can be found [here](https://docs.aps.appier.com/docs/admob-mediation-sdk-ios).
 
 Refer to [ads-ios-sample-swift](https://github.com/appier/ads-ios-sample-swift) for sample integrations.
 
-
 ## Prerequisites
 
-- Make sure you are using AdMob iOS SDK version >= `9.3.0`, < `10.0.0`
-- Make sure your project's iOS target version >= `12.0`
-- Make sure you have already configured line items on AdMob Web UI
-	- `Class Name` field should be `AppierAdsAdMobMediation.APRAdAdapter`
-	- `Parameter` field should follow the format `{ "zoneId": "<your_zone_id_from_appier>" }`
+- Google Mobile Ads SDK (AdMob) `~> 12.4`
+- AppierAds iOS SDK `~> 1.2`
+- iOS deployment target >= `12.0`
+- Configure line items on the AdMob dashboard:
+  - `Class Name`: `AppierAdsAdMobMediation.APRAdAdapter`
+  - `Parameter`: `{ "zoneId": "<your_zone_id_from_appier>" }`
 
 ## Installation
 
+### Swift Package Manager
+
+In Xcode, go to **File › Add Package Dependencies** and enter:
+
+```
+https://github.com/appier/ads-ios-admob-mediation
+```
+
+Also add the following packages separately:
+- [Google Mobile Ads SDK](https://github.com/googleads/swift-package-manager-google-mobile-ads) (`~> 12.4`)
+- AppierAds SDK (`~> 1.2`)
+
 ### CocoaPods
 
-To integrate `AppierAdsAdMobMediation` into your Xcode project using CocoaPods, specify the frameworks in your `Podfile`
-``` ruby
-pod 'AppierAdsAdMobMediation', '1.2.3'
-pod 'AppierAds', '1.2.1'
-pod 'Google-Mobile-Ads-SDK', '9.5.0'
+Add to your `Podfile`:
+
+```ruby
+pod 'AppierAdsAdMobMediation', '~> 1.3'
+pod 'AppierAds', '~> 1.2'
+pod 'Google-Mobile-Ads-SDK', '~> 12.4'
 ```
 
 ## Initialize the Ads SDK
