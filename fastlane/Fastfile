@@ -1,0 +1,121 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Generate Xcode workspace"
+  lane :generate do |options|
+    if options[:git_tag]
+      ENV["TUIST_APPIER_GIT_TAG"] = options[:git_tag]
+
+    elsif options[:git_branch]
+      ENV["TUIST_APPIER_GIT_SHA"] = git_sha(
+        repository: "git@bitbucket.org:plaxieappier/pmp-ios-admob-mediation.git",
+        branch: options[:git_branch]
+      )
+
+    elsif options[:local_path]
+      ENV["TUIST_APPIER_LOCAL_PATH"] = "#{options[:local_path]}/pmp-ios-admob-mediation"
+    end
+
+    if is_ci
+      ENV["TUIST_IS_CI"] = "YES"
+    end
+
+    Dir.chdir("..") do
+      sh "pod repo update"
+      sh "tuist clean"
+      sh "tuist generate"
+      sh "pod install"
+    end
+  end
+
+  desc "Build Admob Mediation framework"
+  lane :build do |options|
+    ci_build_number = ENV["CIRCLE_BUILD_NUM"]
+
+    unless ci_build_number.nil?
+      increment_build_number(
+        build_number: ci_build_number,
+        xcodeproj: "./AppierAdsAdMobMediationSdk/AppierAdsAdMobMediationSdk.xcodeproj"
+      )
+    end
+
+    timestamp = Time.new.strftime("%Y%m%d-%H%M%S")
+    fallback_output_directory = "AppierAdMobMediationFramework/#{timestamp}"
+    xcframework_output_directory = options.fetch(:xcframework_output_directory, fallback_output_directory)
+    archive_output_directory = options.fetch(:archive_output_directory, fallback_output_directory)
+    configuration = options[:configuration]
+
+    build_appier_framework(
+      configuration: configuration,
+      output_directory: xcframework_output_directory
+    )
+
+    plist_file = "../#{xcframework_output_directory}/AppierAdsAdMobMediation.xcframework/ios-arm64/AppierAdsAdMobMediation.framework/Info.plist"
+    version_number = sh("/usr/libexec/PlistBuddy #{plist_file} -c 'Print :CFBundleShortVersionString'").strip
+    build_number = sh("/usr/libexec/PlistBuddy #{plist_file} -c 'Print :CFBundleVersion'").strip
+
+    archive_name = "AppierAdMobMediationFramework-v#{version_number}"
+
+    unless build_number == "0"
+      archive_name += "-#{build_number}"
+    end
+
+    unless configuration.nil?
+      archive_name += "-#{configuration}"
+    end
+
+    commit = last_git_commit
+    short_hash = commit[:abbreviated_commit_hash]
+    archive_name += "-#{short_hash}"
+
+    Dir.chdir("../#{xcframework_output_directory}") do
+      sh "zip -r #{archive_name}.zip AppierAdsAdMobMediation.xcframework"
+
+      unless xcframework_output_directory == archive_output_directory
+        sh "mkdir -p ../#{archive_output_directory}"
+        sh "mv #{archive_name}.zip ../#{archive_output_directory}/"
+      end
+    end
+
+    copy_artifacts(
+      target_path: ENV["FL_OUTPUT_DIR"],
+      keep_original: false,
+      artifacts: [
+        xcframework_output_directory,
+        archive_output_directory
+      ]
+    )
+  end
+
+  private_lane :git_sha do |options|
+    repository = options[:repository]
+    branch = options[:branch]
+
+    output = sh "git ls-remote #{repository} #{branch}"
+
+    if output.empty?
+      UI.important "#{repository}: #{branch} branch doesn't exist. Falling back on master branch..."
+      output = sh "git ls-remote #{repository} master"
+    end
+
+    sha = /[^\s]+/.match(output)[0]
+    sha
+  end
+
+end
