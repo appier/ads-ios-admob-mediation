@@ -361,13 +361,15 @@ SWIFT_CLASS("_TtC23AppierAdsAdMobMediation16APRAdMobNativeAd")
 @end
 
 @class APRNativeAd;
-@interface APRAdMobNativeAd (SWIFT_EXTENSION(AppierAdsAdMobMediation)) <NativeAdDelegate>
-- (void)onAdLoadedWithNativeAd:(APRNativeAd * _Nonnull)nativeAd;
-- (void)onAdLoadedFailedWithNativeAd:(APRNativeAd * _Nonnull)nativeAd error:(APRError * _Nonnull)error;
-- (void)onAdImpressionRecordedWithNativeAd:(APRNativeAd * _Nonnull)nativeAd;
-- (void)onAdImpressionRecordedFailedWithNativeAd:(APRNativeAd * _Nonnull)nativeAd error:(APRError * _Nonnull)error;
-- (void)onAdClickedRecordedWithNativeAd:(APRNativeAd * _Nonnull)nativeAd;
-- (void)onAdClickedRecordedFailedWithNativeAd:(APRNativeAd * _Nonnull)nativeAd error:(APRError * _Nonnull)error;
+@interface APRAdMobNativeAd (SWIFT_EXTENSION(AppierAdsAdMobMediation)) <APRNativeAdDelegate>
+- (void)onAdLoaded:(APRNativeAd * _Nonnull)nativeAd;
+- (void)onAdLoadedFailed:(APRNativeAd * _Nonnull)nativeAd error:(APRError * _Nonnull)error;
+- (void)onAdNoBid:(APRNativeAd * _Nonnull)nativeAd;
+- (void)onAdShown:(APRNativeAd * _Nonnull)nativeAd;
+- (void)onAdImpressionRecorded:(APRNativeAd * _Nonnull)nativeAd;
+- (void)onAdImpressionRecordedFailed:(APRNativeAd * _Nonnull)nativeAd error:(APRError * _Nonnull)error;
+- (void)onAdClickedRecorded:(APRNativeAd * _Nonnull)nativeAd;
+- (void)onAdClickedRecordedFailed:(APRNativeAd * _Nonnull)nativeAd error:(APRError * _Nonnull)error;
 @end
 
 @class GADNativeAdImage;

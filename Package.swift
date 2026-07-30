@@ -12,7 +12,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", from: "12.4.0"),
-        .package(url: "https://github.com/appier/ads-ios-sdk", from: "1.2.1")
+        .package(url: "https://github.com/appier/ads-ios-sdk", from: "2.0.0")
     ],
     targets: [
         .binaryTarget(
