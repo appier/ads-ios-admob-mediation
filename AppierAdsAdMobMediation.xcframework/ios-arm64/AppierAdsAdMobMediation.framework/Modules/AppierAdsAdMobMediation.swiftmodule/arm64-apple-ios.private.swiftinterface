@@ -9,6 +9,18 @@ import Swift
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc public class APRAdAdapter : ObjectiveC.NSObject, GoogleMobileAds.MediationAdapter {
+  @objc public static func adapterVersion() -> GoogleMobileAds.VersionNumber
+  @objc public static func adSDKVersion() -> GoogleMobileAds.VersionNumber
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func networkExtrasClass() -> (any GoogleMobileAds.AdNetworkExtras.Type)?
+  #endif
+  @objc override required dynamic public init()
+  @objc public func loadNativeAd(for adConfiguration: GoogleMobileAds.MediationNativeAdConfiguration, completionHandler: @escaping GoogleMobileAds.GADMediationNativeLoadCompletionHandler)
+  @objc deinit
+}
+extension AppierAds.APRAdExtras : GoogleMobileAds.AdNetworkExtras {
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class APRAdMobAdManager : ObjectiveC.NSObject {
   @objc nonisolated(unsafe) public static let shared: AppierAdsAdMobMediation.APRAdMobAdManager
   @objc weak final public var eventDelegate: (any AppierAdsAdMobMediation.APRAdMobAdEventDelegate)?
@@ -20,16 +32,12 @@ import _SwiftConcurrencyShims
   @objc optional func onNativeAdClickedRecorded(nativeAd: AppierAdsAdMobMediation.APRAdMobNativeAd)
   @objc optional func onNativeAdClickedRecordedFailed(nativeAd: AppierAdsAdMobMediation.APRAdMobNativeAd, error: AppierAds.APRError)
 }
-extension AppierAds.APRAdExtras : GoogleMobileAds.AdNetworkExtras {
-}
-@_inheritsConvenienceInitializers @objc public class APRAdAdapter : ObjectiveC.NSObject, GoogleMobileAds.MediationAdapter {
-  @objc public static func adapterVersion() -> GoogleMobileAds.VersionNumber
-  @objc public static func adSDKVersion() -> GoogleMobileAds.VersionNumber
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public static func networkExtrasClass() -> (any GoogleMobileAds.AdNetworkExtras.Type)?
-  #endif
-  @objc override required dynamic public init()
-  @objc public func loadNativeAd(for adConfiguration: GoogleMobileAds.MediationNativeAdConfiguration, completionHandler: @escaping GoogleMobileAds.GADMediationNativeLoadCompletionHandler)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class APRAdMobMediation : ObjectiveC.NSObject {
+  @objc nonisolated(unsafe) public static let shared: AppierAdsAdMobMediation.APRAdMobMediation
+  @objc final public let appInfo: Swift.String
+  @objc final public let advertiserIcon: Swift.String
+  @objc final public let advertiserName: Swift.String
+  @objc final public let version: Swift.String
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class APRAdMobNativeAd : ObjectiveC.NSObject {
@@ -103,19 +111,13 @@ extension AppierAdsAdMobMediation.APRAdMobNativeAd : GoogleMobileAds.MediationNa
   @objc dynamic public func didUntrackView(_ view: UIKit.UIView?)
   #endif
 }
-extension AppierAdsAdMobMediation.APRAdMobNativeAd : AppierAds.NativeAdDelegate {
-  @objc dynamic public func onAdLoaded(nativeAd: AppierAds.APRNativeAd)
-  @objc dynamic public func onAdLoadedFailed(nativeAd: AppierAds.APRNativeAd, error: AppierAds.APRError)
-  @objc dynamic public func onAdImpressionRecorded(nativeAd: AppierAds.APRNativeAd)
-  @objc dynamic public func onAdImpressionRecordedFailed(nativeAd: AppierAds.APRNativeAd, error: AppierAds.APRError)
-  @objc dynamic public func onAdClickedRecorded(nativeAd: AppierAds.APRNativeAd)
-  @objc dynamic public func onAdClickedRecordedFailed(nativeAd: AppierAds.APRNativeAd, error: AppierAds.APRError)
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class APRAdMobMediation : ObjectiveC.NSObject {
-  @objc nonisolated(unsafe) public static let shared: AppierAdsAdMobMediation.APRAdMobMediation
-  @objc final public let appInfo: Swift.String
-  @objc final public let advertiserIcon: Swift.String
-  @objc final public let advertiserName: Swift.String
-  @objc final public let version: Swift.String
-  @objc deinit
+extension AppierAdsAdMobMediation.APRAdMobNativeAd : AppierAds.APRNativeAdDelegate {
+  @objc dynamic public func onAdLoaded(_ nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onAdLoadedFailed(_ nativeAd: AppierAds.APRNativeAd, error: AppierAds.APRError)
+  @objc dynamic public func onAdNoBid(_ nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onAdShown(_ nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onAdImpressionRecorded(_ nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onAdImpressionRecordedFailed(_ nativeAd: AppierAds.APRNativeAd, error: AppierAds.APRError)
+  @objc dynamic public func onAdClickedRecorded(_ nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onAdClickedRecordedFailed(_ nativeAd: AppierAds.APRNativeAd, error: AppierAds.APRError)
 }
