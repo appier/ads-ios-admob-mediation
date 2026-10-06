@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.frameworks        = "Foundation"
   s.requires_arc      = true
   s.static_framework  = true
-  s.user_target_xcconfig = { "OTHER_LDFLAGS" => "-lObjC" }
+  s.user_target_xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
   s.dependency "Google-Mobile-Ads-SDK", "~> 12.4"
   s.dependency "AppierAds", "~> 2.0"
 end
