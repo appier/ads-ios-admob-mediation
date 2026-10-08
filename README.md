@@ -1,17 +1,19 @@
-# Appier Mediation for AdMob iOS SDK
+# Appier Mediation for AdMob and Google Ad Manager iOS SDK
 
-This is Appier's official iOS mediation adapter for the Google Mobile Ads (AdMob) SDK. The latest documentation can be found [here](https://docs.aps.appier.com/docs/admob-mediation-sdk-ios).
+This is Appier's official iOS mediation adapter for the Google Mobile Ads (GMA) SDK. It supports both **AdMob** mediation and **Google Ad Manager (GAM)** mediation — the same adapter, the same class name, the same server parameter schema. The latest documentation can be found [here](https://docs.aps.appier.com/docs/admob-mediation-sdk-ios).
 
 Refer to [ads-ios-sample-swift](https://github.com/appier/ads-ios-sample-swift) for sample integrations.
 
 ## Prerequisites
 
-- Google Mobile Ads SDK (AdMob) `~> 12.4`
-- AppierAds iOS SDK `~> 1.2`
+- Google Mobile Ads SDK `~> 12.4`
+- AppierAds iOS SDK `~> 2.1`
 - iOS deployment target >= `12.0`
-- Configure line items on the AdMob dashboard:
+- Configure the mediation line item on your Google dashboard:
   - `Class Name`: `AppierAdsAdMobMediation.APRAdAdapter`
   - `Parameter`: `{ "zoneId": "<your_zone_id_from_appier>" }`
+
+  The same values work on both AdMob and Ad Manager — see [Google Ad Manager (GAM)](#google-ad-manager-gam) for the Ad Manager setup.
 
 ## Installation
 
@@ -25,15 +27,17 @@ https://github.com/appier/ads-ios-admob-mediation
 
 Also add the following packages separately:
 - [Google Mobile Ads SDK](https://github.com/googleads/swift-package-manager-google-mobile-ads) (`~> 12.4`)
-- [AppierAds SDK](https://github.com/appier/ads-ios-sdk) (`~> 1.2`)
+- [AppierAds SDK](https://github.com/appier/ads-ios-sdk) (`~> 2.1`)
+
+Then add `-ObjC` to your app target's **Build Settings › Other Linker Flags**. The adapter ships as a static library and GMA only looks it up by its class name, so nothing in your code references it; without `-ObjC` the linker can drop it and GMA never calls the Appier adapter. CocoaPods adds this flag for you.
 
 ### CocoaPods
 
 Add to your `Podfile`:
 
 ```ruby
-pod 'AppierAdsAdMobMediation', '~> 1.3'
-pod 'AppierAds', '~> 1.2'
+pod 'AppierAdsAdMobMediation', '~> 2.1'
+pod 'AppierAds', '~> 2.1'
 pod 'Google-Mobile-Ads-SDK', '~> 12.4'
 ```
 
@@ -224,6 +228,59 @@ class AdMobNativeViewController: UIViewController, APRAdMobAdEventDelegate {
     func onNativeAdClickedRecordedFailed(nativeAd: APRAdMobNativeAd, error: APRError) {}
 }
 ```
+
+## Google Ad Manager (GAM)
+
+Ad Manager and AdMob are served by the same Google Mobile Ads SDK, and GMA hands both of them to the same Appier adapter class. Nothing about the adapter changes: `AppierAdsAdMobMediation.APRAdAdapter` is still the class you configure, `APRAdExtras` is still how you pass local extras, and `APRAdMobAdEventDelegate` still reports impressions and clicks. Only the dashboard setup and the request you build in the app differ.
+
+### 1. Configure the custom event in Ad Manager
+
+In Ad Manager, Appier is added as a **yield partner** whose integration type is **custom event**, inside a yield group targeting your native inventory (**Delivery › Yield groups › New yield group**, format `Native`). Ad Manager's exact menu labels move between releases; what matters is the three fields on the custom event:
+
+| Field | Value |
+| --- | --- |
+| `Class Name` | `AppierAdsAdMobMediation.APRAdAdapter` |
+| `Parameter` | `{"adUnitId":"<your_ad_unit_id>","zoneId":"<your_zone_id_from_appier>"}` |
+| `Label` | Anything that identifies the placement to you |
+
+`Class Name` is platform-specific: the value above is the iOS one (Swift module name + class name). Entering the Android class name on an iOS line item is not an error Ad Manager reports — GMA simply fails to find the adapter and falls through to the next network, so Appier ads never appear.
+
+The server parameter is exactly the same shape as on AdMob — the adapter cannot tell the two platforms apart, and does not need to.
+
+### 2. Use a separate Appier zone ID for GAM
+
+`zoneId` is the only placement identifier the adapter sends to the Appier ad server, so **it is also the only thing that can distinguish GAM traffic from AdMob traffic**. If you need the two reported separately, ask Appier for a dedicated zone for your Ad Manager inventory and use it in the GAM `Parameter` only.
+
+Reusing one zone across both platforms is supported, but the traffic is then indistinguishable server-side and cannot be split apart afterwards.
+
+### 3. Build the request in your app
+
+Use `AdManagerAdRequest` and your Ad Manager ad unit path (`/<network-code>/<ad-unit>`) instead of the AdMob ad unit ID. Registering `APRAdExtras` is identical:
+
+``` swift
+import AppierAds
+import GoogleMobileAds
+import AppierAdsAdMobMediation
+
+// Set localExtras — same as AdMob
+let appierExtras = APRAdExtras()
+appierExtras.set(key: .adUnitId, value: "<your_ad_unit_id>")
+appierExtras.set(key: .appInfo, value: SampleAppInfo())
+
+// Build request against the Ad Manager ad unit path
+let adLoader = AdLoader(
+    adUnitID: "/<network-code>/<ad-unit>",
+    rootViewController: self,
+    adTypes: [.native],
+    options: nil)
+
+// Load Ad — AdManagerAdRequest, not AdRequest
+let request = AdManagerAdRequest()
+request.register(appierExtras)
+adLoader.load(request)
+```
+
+Everything from the `adLoader(_:didReceive:)` callback onward — detecting an Appier ad through `advertiser`, reading `extraAssets`, registering `APRAdMobAdManager.shared.eventDelegate` — is the same as the AdMob integration above.
 
 ## Enabling Test Ads
 
