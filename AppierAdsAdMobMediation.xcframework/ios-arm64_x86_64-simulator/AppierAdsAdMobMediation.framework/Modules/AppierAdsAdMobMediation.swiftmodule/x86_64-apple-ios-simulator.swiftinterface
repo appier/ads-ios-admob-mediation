@@ -1,20 +1,19 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
-// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AppierAdsAdMobMediation
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
-import AppierAds
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AppierAdsAdMobMediation
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+@preconcurrency import AppierAds
 import Foundation
 import GoogleMobileAds
 import Swift
+import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 @_inheritsConvenienceInitializers @objc public class APRAdAdapter : ObjectiveC.NSObject, GoogleMobileAds.MediationAdapter {
   @objc public static func adapterVersion() -> GoogleMobileAds.VersionNumber
   @objc public static func adSDKVersion() -> GoogleMobileAds.VersionNumber
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func networkExtrasClass() -> (any GoogleMobileAds.AdNetworkExtras.Type)?
-  #endif
   @objc override required dynamic public init()
   @objc public func loadNativeAd(for adConfiguration: GoogleMobileAds.MediationNativeAdConfiguration, completionHandler: @escaping GoogleMobileAds.GADMediationNativeLoadCompletionHandler)
   @objc deinit
@@ -53,63 +52,56 @@ extension AppierAds.APRAdExtras : GoogleMobileAds.AdNetworkExtras {
   @objc deinit
 }
 extension AppierAdsAdMobMediation.APRAdMobNativeAd : GoogleMobileAds.MediationNativeAd {
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public var headline: Swift.String? {
     @objc get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public var images: [GoogleMobileAds.NativeAdImage]? {
     @objc get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public var hasVideoContent: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var mediaView: UIKit.UIView? {
+    @objc get
+  }
+  @objc dynamic public var mediaContentAspectRatio: CoreFoundation.CGFloat {
+    @objc get
+  }
+  @objc dynamic public var duration: Foundation.TimeInterval {
+    @objc get
+  }
+  @objc dynamic public var currentTime: Foundation.TimeInterval {
+    @objc get
+  }
   @objc dynamic public var body: Swift.String? {
     @objc get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public var icon: GoogleMobileAds.NativeAdImage? {
     @objc get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public var callToAction: Swift.String? {
     @objc get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public var starRating: Foundation.NSDecimalNumber? {
     @objc get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public var store: Swift.String? {
     @objc get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public var price: Swift.String? {
     @objc get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public var advertiser: Swift.String? {
     @objc get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public var extraAssets: [Swift.String : Any]? {
     @objc get
   }
-  #endif
   @objc dynamic public func handlesUserImpressions() -> Swift.Bool
   @objc dynamic public func handlesUserClicks() -> Swift.Bool
   @objc dynamic public func didRecordImpression()
   @objc dynamic public func didRecordClickOnAsset(with assetName: GoogleMobileAds.GADNativeAssetIdentifier, view: UIKit.UIView, viewController: UIKit.UIViewController)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func didUntrackView(_ view: UIKit.UIView?)
-  #endif
 }
 extension AppierAdsAdMobMediation.APRAdMobNativeAd : AppierAds.APRNativeAdDelegate {
   @objc dynamic public func onAdLoaded(_ nativeAd: AppierAds.APRNativeAd)
@@ -120,4 +112,9 @@ extension AppierAdsAdMobMediation.APRAdMobNativeAd : AppierAds.APRNativeAdDelega
   @objc dynamic public func onAdImpressionRecordedFailed(_ nativeAd: AppierAds.APRNativeAd, error: AppierAds.APRError)
   @objc dynamic public func onAdClickedRecorded(_ nativeAd: AppierAds.APRNativeAd)
   @objc dynamic public func onAdClickedRecordedFailed(_ nativeAd: AppierAds.APRNativeAd, error: AppierAds.APRError)
+  @objc dynamic public func onVideoStart(_ nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onVideoPause(_ nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onVideoResume(_ nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onVideoComplete(_ nativeAd: AppierAds.APRNativeAd)
+  @objc dynamic public func onVideoMuteChanged(_ nativeAd: AppierAds.APRNativeAd, muted: Swift.Bool)
 }

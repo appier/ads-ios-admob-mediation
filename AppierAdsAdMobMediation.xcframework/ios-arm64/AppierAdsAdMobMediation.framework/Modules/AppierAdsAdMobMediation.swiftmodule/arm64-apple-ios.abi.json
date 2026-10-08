@@ -244,38 +244,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -286,10 +258,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -300,10 +286,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -529,38 +529,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -571,10 +543,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -585,10 +571,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -1061,38 +1061,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -1103,10 +1075,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -1117,10 +1103,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -1392,7 +1392,8 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isFromExtension": true,
             "accessors": [
@@ -1429,6 +1430,274 @@
                 "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C6imagesSaySo09GADNativeC5ImageCGSgvg",
                 "moduleName": "AppierAdsAdMobMediation",
                 "objc_name": "images",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasVideoContent",
+            "printedName": "hasVideoContent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(py)hasVideoContent",
+            "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C15hasVideoContentSbvp",
+            "moduleName": "AppierAdsAdMobMediation",
+            "objc_name": "hasVideoContent",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(im)hasVideoContent",
+                "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C15hasVideoContentSbvg",
+                "moduleName": "AppierAdsAdMobMediation",
+                "objc_name": "hasVideoContent",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mediaView",
+            "printedName": "mediaView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(py)mediaView",
+            "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C9mediaViewSo6UIViewCSgvp",
+            "moduleName": "AppierAdsAdMobMediation",
+            "objc_name": "mediaView",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(im)mediaView",
+                "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C9mediaViewSo6UIViewCSgvg",
+                "moduleName": "AppierAdsAdMobMediation",
+                "objc_name": "mediaView",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mediaContentAspectRatio",
+            "printedName": "mediaContentAspectRatio",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(py)mediaContentAspectRatio",
+            "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C23mediaContentAspectRatio12CoreGraphics7CGFloatVvp",
+            "moduleName": "AppierAdsAdMobMediation",
+            "objc_name": "mediaContentAspectRatio",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(im)mediaContentAspectRatio",
+                "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C23mediaContentAspectRatio12CoreGraphics7CGFloatVvg",
+                "moduleName": "AppierAdsAdMobMediation",
+                "objc_name": "mediaContentAspectRatio",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "duration",
+            "printedName": "duration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(py)duration",
+            "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C8durationSdvp",
+            "moduleName": "AppierAdsAdMobMediation",
+            "objc_name": "duration",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(im)duration",
+                "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C8durationSdvg",
+                "moduleName": "AppierAdsAdMobMediation",
+                "objc_name": "duration",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentTime",
+            "printedName": "currentTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(py)currentTime",
+            "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C11currentTimeSdvp",
+            "moduleName": "AppierAdsAdMobMediation",
+            "objc_name": "currentTime",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(im)currentTime",
+                "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C11currentTimeSdvg",
+                "moduleName": "AppierAdsAdMobMediation",
+                "objc_name": "currentTime",
                 "declAttributes": [
                   "Dynamic",
                   "ObjC"
@@ -2037,7 +2306,8 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -2403,6 +2673,164 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onVideoStart",
+            "printedName": "onVideoStart(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APRNativeAd",
+                "printedName": "AppierAds.APRNativeAd",
+                "usr": "c:@M@AppierAds@objc(cs)APRNativeAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(im)onVideoStart:",
+            "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C12onVideoStartyy0aB009APRNativeC0CF",
+            "moduleName": "AppierAdsAdMobMediation",
+            "objc_name": "onVideoStart:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onVideoPause",
+            "printedName": "onVideoPause(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APRNativeAd",
+                "printedName": "AppierAds.APRNativeAd",
+                "usr": "c:@M@AppierAds@objc(cs)APRNativeAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(im)onVideoPause:",
+            "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C12onVideoPauseyy0aB009APRNativeC0CF",
+            "moduleName": "AppierAdsAdMobMediation",
+            "objc_name": "onVideoPause:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onVideoResume",
+            "printedName": "onVideoResume(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APRNativeAd",
+                "printedName": "AppierAds.APRNativeAd",
+                "usr": "c:@M@AppierAds@objc(cs)APRNativeAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(im)onVideoResume:",
+            "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C13onVideoResumeyy0aB009APRNativeC0CF",
+            "moduleName": "AppierAdsAdMobMediation",
+            "objc_name": "onVideoResume:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onVideoComplete",
+            "printedName": "onVideoComplete(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APRNativeAd",
+                "printedName": "AppierAds.APRNativeAd",
+                "usr": "c:@M@AppierAds@objc(cs)APRNativeAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(im)onVideoComplete:",
+            "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C15onVideoCompleteyy0aB009APRNativeC0CF",
+            "moduleName": "AppierAdsAdMobMediation",
+            "objc_name": "onVideoComplete:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onVideoMuteChanged",
+            "printedName": "onVideoMuteChanged(_:muted:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APRNativeAd",
+                "printedName": "AppierAds.APRNativeAd",
+                "usr": "c:@M@AppierAds@objc(cs)APRNativeAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AppierAdsAdMobMediation@objc(cs)APRAdMobNativeAd(im)onVideoMuteChanged:muted:",
+            "mangledName": "$s23AppierAdsAdMobMediation05APRAdd6NativeC0C18onVideoMuteChanged_5mutedy0aB009APRNativeC0C_SbtF",
+            "moduleName": "AppierAdsAdMobMediation",
+            "objc_name": "onVideoMuteChanged:muted:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -2422,45 +2850,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+            "name": "APRNativeAdDelegate",
+            "printedName": "APRNativeAdDelegate",
+            "usr": "c:@M@AppierAds@objc(pl)APRNativeAdDelegate",
+            "mangledName": "$s9AppierAds19APRNativeAdDelegateP"
           },
           {
             "kind": "Conformance",
@@ -2471,10 +2864,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -2485,10 +2892,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "APRNativeAdDelegate",
-            "printedName": "APRNativeAdDelegate",
-            "usr": "c:@M@AppierAds@objc(pl)APRNativeAdDelegate",
-            "mangledName": "$s9AppierAds19APRNativeAdDelegateP"
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -2528,6 +2956,20 @@
         "moduleName": "AppierAdsAdMobMediation"
       },
       {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AppierAdsAdMobMediation"
+      },
+      {
+        "kind": "Import",
+        "name": "AppierAds",
+        "printedName": "AppierAds",
+        "declKind": "Import",
+        "moduleName": "AppierAdsAdMobMediation"
+      },
+      {
         "kind": "TypeDecl",
         "name": "APRAdExtras",
         "printedName": "APRAdExtras",
@@ -2547,38 +2989,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -2589,10 +3003,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -2603,10 +3031,110 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "APRNativeAd",
+        "printedName": "APRNativeAd",
+        "declKind": "Class",
+        "usr": "c:@M@AppierAds@objc(cs)APRNativeAd",
+        "mangledName": "$s9AppierAds11APRNativeAdC",
+        "moduleName": "AppierAds",
+        "declAttributes": [
+          "Final",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@AppierAds@objc(cs)AppierBaseAd",
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "AppierAds.AppierBaseAd",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CustomDebugStringConvertible",
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       }
@@ -2615,56 +3143,77 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/tmp\/claude-502\/-Users-johnson-wang-Documents-Appier-Ads-appier-ads-ios\/8a351a82-cc1c-491c-8a14-ed38cced6d02\/scratchpad\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/APRAdMobMediation.swift",
+      "filePath": "\/Users\/runner\/work\/appier-ads-ios-admob-mediation\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/APRAdMobMediation.swift",
       "kind": "StringLiteral",
       "offset": 271,
       "length": 10,
       "value": "\"app_info\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-johnson-wang-Documents-Appier-Ads-appier-ads-ios\/8a351a82-cc1c-491c-8a14-ed38cced6d02\/scratchpad\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/APRAdMobMediation.swift",
+      "filePath": "\/Users\/runner\/work\/appier-ads-ios-admob-mediation\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/APRAdMobMediation.swift",
       "kind": "StringLiteral",
       "offset": 320,
       "length": 17,
       "value": "\"advertiser_icon\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-johnson-wang-Documents-Appier-Ads-appier-ads-ios\/8a351a82-cc1c-491c-8a14-ed38cced6d02\/scratchpad\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/APRAdMobMediation.swift",
+      "filePath": "\/Users\/runner\/work\/appier-ads-ios-admob-mediation\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/APRAdMobMediation.swift",
       "kind": "StringLiteral",
       "offset": 376,
       "length": 8,
       "value": "\"Appier\""
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-johnson-wang-Documents-Appier-Ads-appier-ads-ios\/8a351a82-cc1c-491c-8a14-ed38cced6d02\/scratchpad\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/APRAdMobMediation.swift",
-      "kind": "StringLiteral",
-      "offset": 499,
-      "length": 28,
-      "value": "\"CFBundleShortVersionString\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-johnson-wang-Documents-Appier-Ads-appier-ads-ios\/8a351a82-cc1c-491c-8a14-ed38cced6d02\/scratchpad\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/APRAdMobMediation.swift",
-      "kind": "StringLiteral",
-      "offset": 543,
-      "length": 7,
-      "value": "\"0.0.0\""
-    },
-    {
-      "filePath": "\/tmp\/claude-502\/-Users-johnson-wang-Documents-Appier-Ads-appier-ads-ios\/8a351a82-cc1c-491c-8a14-ed38cced6d02\/scratchpad\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/Ads\/APRAdMobNativeAd.swift",
+      "filePath": "\/Users\/runner\/work\/appier-ads-ios-admob-mediation\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/Ads\/APRAdMobNativeAd.swift",
       "kind": "Array",
-      "offset": 1694,
+      "offset": 3220,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-johnson-wang-Documents-Appier-Ads-appier-ads-ios\/8a351a82-cc1c-491c-8a14-ed38cced6d02\/scratchpad\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/Ads\/APRAdMobNativeAd.swift",
+      "filePath": "\/Users\/runner\/work\/appier-ads-ios-admob-mediation\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/Ads\/APRAdMobNativeAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3806,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appier-ads-ios-admob-mediation\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/Ads\/APRAdMobNativeAd.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4629,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appier-ads-ios-admob-mediation\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/Ads\/APRAdMobNativeAd.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4735,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appier-ads-ios-admob-mediation\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/Ads\/APRAdMobNativeAd.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4847,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appier-ads-ios-admob-mediation\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/Ads\/APRAdMobNativeAd.swift",
       "kind": "Dictionary",
-      "offset": 2643,
+      "offset": 5668,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/tmp\/claude-502\/-Users-johnson-wang-Documents-Appier-Ads-appier-ads-ios\/8a351a82-cc1c-491c-8a14-ed38cced6d02\/scratchpad\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/Utlities.swift",
+      "filePath": "\/Users\/runner\/work\/appier-ads-ios-admob-mediation\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/AdapterVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 460,
+      "length": 7,
+      "value": "\"2.1.0\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/appier-ads-ios-admob-mediation\/appier-ads-ios-admob-mediation\/AppierAdsAdMobMediationSdk\/Utlities.swift",
       "kind": "StringLiteral",
       "offset": 71,
       "length": 17,
