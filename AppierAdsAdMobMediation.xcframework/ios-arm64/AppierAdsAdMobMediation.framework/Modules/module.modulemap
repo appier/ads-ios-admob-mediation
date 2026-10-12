@@ -1,3 +1,4 @@
 framework module AppierAdsAdMobMediation {
   header "AppierAdsAdMobMediation-Swift.h"
+  requires objc
 }
