@@ -3,8 +3,12 @@ name: On Release PR Merged
 on:
   pull_request:
     types: [closed]
+    # One branch per adapter release line: master = 3.x (GMA 13),
+    # release/gma-12 = 2.x (GMA 12). GitHub runs this file from the PR's base
+    # branch, so keep it identical on both.
     branches:
       - master
+      - release/gma-12
 
 jobs:
   dispatch:
