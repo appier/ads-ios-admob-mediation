@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "AppierAdsAdMobMediation",
-    platforms: [.iOS(.v12)],
+    platforms: [.iOS(.v13)],
     products: [
         .library(
             name: "AppierAdsAdMobMediation",
@@ -11,7 +11,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", from: "12.4.0"),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", from: "13.0.0"),
         .package(url: "https://github.com/appier/ads-ios-sdk", from: "2.1.0")
     ],
     targets: [
