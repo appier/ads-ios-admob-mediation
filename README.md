@@ -7,7 +7,7 @@ Refer to [ads-ios-sample-swift](https://github.com/appier/ads-ios-sample-swift) 
 ## Prerequisites
 
 - Google Mobile Ads SDK `~> 12.4`
-- AppierAds iOS SDK `~> 2.1`
+- AppierAds iOS SDK `~> 2.2`
 - iOS deployment target >= `12.0`
 - Configure the mediation line item on your Google dashboard:
   - `Class Name`: `AppierAdsAdMobMediation.APRAdAdapter`
@@ -27,7 +27,7 @@ https://github.com/appier/ads-ios-admob-mediation
 
 Also add the following packages separately:
 - [Google Mobile Ads SDK](https://github.com/googleads/swift-package-manager-google-mobile-ads) (`~> 12.4`)
-- [AppierAds SDK](https://github.com/appier/ads-ios-sdk) (`~> 2.1`)
+- [AppierAds SDK](https://github.com/appier/ads-ios-sdk) (`~> 2.2`)
 
 Then add `-ObjC` to your app target's **Build Settings › Other Linker Flags**. The adapter ships as a static library and GMA only looks it up by its class name, so nothing in your code references it; without `-ObjC` the linker can drop it and GMA never calls the Appier adapter. CocoaPods adds this flag for you.
 
@@ -37,7 +37,7 @@ Add to your `Podfile`:
 
 ```ruby
 pod 'AppierAdsAdMobMediation', '~> 2.1'
-pod 'AppierAds', '~> 2.1'
+pod 'AppierAds', '~> 2.2'
 pod 'Google-Mobile-Ads-SDK', '~> 12.4'
 ```
 
