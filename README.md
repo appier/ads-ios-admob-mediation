@@ -10,15 +10,15 @@ Each adapter major version is built against one Google Mobile Ads (GMA) SDK majo
 
 | Adapter version | Google Mobile Ads SDK | AppierAds iOS SDK | Minimum iOS |
 |-----------------|-----------------------|-------------------|-------------|
-| `3.x` | `~> 13.0` | `~> 2.1` | `13.0` |
-| `2.x` | `~> 12.4` | `~> 2.1` | `12.0` |
+| `3.x` | `~> 13.0` | `~> 2.2` | `13.0` |
+| `2.x` | `~> 12.4` | `~> 2.2` | `12.0` |
 
 The rest of this guide describes the `3.x` line. For GMA 12, use adapter `~> 2.1` with `Google-Mobile-Ads-SDK ~> 12.4` and an iOS `12.0` deployment target; everything else is the same.
 
 ## Prerequisites
 
 - Google Mobile Ads SDK `~> 13.0`
-- AppierAds iOS SDK `~> 2.1`
+- AppierAds iOS SDK `~> 2.2`
 - iOS deployment target >= `13.0`
 - Configure the mediation line item on your Google dashboard:
   - `Class Name`: `AppierAdsAdMobMediation.APRAdAdapter`
@@ -38,7 +38,7 @@ https://github.com/appier/ads-ios-admob-mediation
 
 Also add the following packages separately:
 - [Google Mobile Ads SDK](https://github.com/googleads/swift-package-manager-google-mobile-ads) (`~> 13.0`)
-- [AppierAds SDK](https://github.com/appier/ads-ios-sdk) (`~> 2.1`)
+- [AppierAds SDK](https://github.com/appier/ads-ios-sdk) (`~> 2.2`)
 
 Then add `-ObjC` to your app target's **Build Settings › Other Linker Flags**. The adapter ships as a static library and GMA only looks it up by its class name, so nothing in your code references it; without `-ObjC` the linker can drop it and GMA never calls the Appier adapter. CocoaPods adds this flag for you.
 
@@ -48,7 +48,7 @@ Add to your `Podfile`:
 
 ```ruby
 pod 'AppierAdsAdMobMediation', '~> 3.0'
-pod 'AppierAds', '~> 2.1'
+pod 'AppierAds', '~> 2.2'
 pod 'Google-Mobile-Ads-SDK', '~> 13.0'
 ```
 
